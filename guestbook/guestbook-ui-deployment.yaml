@@ -14,7 +14,7 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-      - image: hoshoshamdy/tech-lab-repo:<+artifact.tag>
+      - image: hoshoshamdy/tech-lab-repo:15
         name: guestbook-ui
         ports:
         - containerPort: 80
