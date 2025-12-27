@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   name: guestbook-ui
 spec:
-  replicas: 2
-  revisionHistoryLimit: 2
+  replicas: 1  # Reduced from 3 to 1 to stay within regional disk quota
+  revisionHistoryLimit: 3
   selector:
     matchLabels:
       app: guestbook-ui
@@ -18,3 +18,11 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 80
+        # ADD THIS SECTION:
+        resources:
+          requests:
+            cpu: "250m"      # Minimal CPU to avoid triggering a new node
+            memory: "512Mi"  # Minimal RAM suitable for a small Java app
+          limits:
+            cpu: "500m"
+            memory: "1Gi"
