@@ -5,3 +5,4 @@ It also has a Thymeleaf providing a single page with JS, so we can play a bit wi
 I might re-write this or another app in dropwizard, but right now Spring Boot is the way!
 
 Add New Line to Test Trigger [I hope it will work]
+Check trigger stage
