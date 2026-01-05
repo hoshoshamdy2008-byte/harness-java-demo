@@ -6,3 +6,6 @@ I might re-write this or another app in dropwizard, but right now Spring Boot is
 
 Add New Line to Test Trigger [I hope it will work]
 Check trigger stage
+
+
+Run the test
